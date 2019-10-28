@@ -20,8 +20,8 @@ int main(int argc, char* argv[]) {
  */
 void add_entry() {
 	// Intialize variables for the word title and definition
-	char* title = (char*) malloc(sizeof(int) * 50);
-	char* definition = (char*) malloc(sizeof(int) * 200);
+	char* title = (char*) malloc(sizeof(char) * 50);
+	char* definition = (char*) malloc(sizeof(char) * 200);
 
 	// Get the input for the word title
 	printf("ENTER WORD >> ");
@@ -32,8 +32,8 @@ void add_entry() {
 	scanf("%[^\n]%*c",definition);
 
 	// Reallocate memory because efficiency
-	title = (char*) realloc(title,sizeof(int)*strlen(title));
-	definition = (char*) realloc(definition,sizeof(int)*strlen(definition));
+	title = (char*) realloc(title,sizeof(char)*strlen(title));
+	definition = (char*) realloc(definition,sizeof(char)*strlen(definition));
 
 	// Write the entry input
 	write_entry(title,definition);
